@@ -4,7 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 
-import protocolsupport.protocol.utils.types.Position;
+import protocolsupport.protocol.types.Position;
 import protocolsupportpocketstuff.ProtocolSupportPocketStuff;
 
 public class PickRequester {

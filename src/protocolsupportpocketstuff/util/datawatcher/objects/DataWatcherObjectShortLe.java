@@ -2,9 +2,9 @@ package protocolsupportpocketstuff.util.datawatcher.objects;
 
 import io.netty.buffer.ByteBuf;
 import protocolsupport.api.ProtocolVersion;
-import protocolsupport.protocol.utils.datawatcher.ReadableDataWatcherObject;
+import protocolsupport.protocol.types.networkentity.metadata.ReadableNetworkEntityMetadataObject;
 
-public class DataWatcherObjectShortLe extends ReadableDataWatcherObject<Short> {
+public class DataWatcherObjectShortLe extends ReadableNetworkEntityMetadataObject<Short> {
 
 	public DataWatcherObjectShortLe() {
 	}

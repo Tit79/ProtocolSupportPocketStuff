@@ -3,9 +3,9 @@ package protocolsupportpocketstuff.api.entity;
 import org.bukkit.entity.Entity;
 import protocolsupport.api.Connection;
 import protocolsupport.protocol.packet.middleimpl.clientbound.play.v_pe.EntityMetadata.PeMetaBase;
-import protocolsupport.protocol.utils.datawatcher.DataWatcherObject;
-import protocolsupport.protocol.utils.datawatcher.objects.DataWatcherObjectFloatLe;
-import protocolsupport.protocol.utils.datawatcher.objects.DataWatcherObjectString;
+import protocolsupport.protocol.types.networkentity.metadata.NetworkEntityMetadataObject;
+import protocolsupport.protocol.types.networkentity.metadata.objects.NetworkEntityMetadataObjectFloatLe;
+import protocolsupport.protocol.types.networkentity.metadata.objects.NetworkEntityMetadataObjectString;
 import protocolsupport.utils.CollectionsUtils;
 import protocolsupportpocketstuff.api.util.PocketCon;
 import protocolsupportpocketstuff.metadata.EntityMetadataProvider;
@@ -43,8 +43,8 @@ public class PocketMetadata {
 			entityScales.put(entityId, scale);
 		}
 		// Update to all players
-		CollectionsUtils.ArrayMap<DataWatcherObject<?>> metadata = new CollectionsUtils.ArrayMap<>(PeMetaBase.SCALE);
-		metadata.put(PeMetaBase.SCALE, new DataWatcherObjectFloatLe(scale));
+		CollectionsUtils.ArrayMap<NetworkEntityMetadataObject<?>> metadata = new CollectionsUtils.ArrayMap<>(PeMetaBase.SCALE);
+		metadata.put(PeMetaBase.SCALE, new NetworkEntityMetadataObjectFloatLe(scale));
 		EntityDataPacket packet = new EntityDataPacket(entityId, metadata);
 		for (Connection connection : PocketCon.getPocketConnections()) {
 			PocketCon.sendPocketPacket(connection, packet);
@@ -74,8 +74,8 @@ public class PocketMetadata {
 			entityInteracts.put(entityId, interactText);
 		}
 		// Update to all players
-		CollectionsUtils.ArrayMap<DataWatcherObject<?>> metadata = new CollectionsUtils.ArrayMap<>(PeMetaBase.BUTTON_TEXT_V1);
-		metadata.put(PeMetaBase.BUTTON_TEXT_V1, new DataWatcherObjectString(interactText));
+		CollectionsUtils.ArrayMap<NetworkEntityMetadataObject<?>> metadata = new CollectionsUtils.ArrayMap<>(PeMetaBase.BUTTON_TEXT_V1);
+		metadata.put(PeMetaBase.BUTTON_TEXT_V1, new NetworkEntityMetadataObjectString(interactText));
 		EntityDataPacket packet = new EntityDataPacket(entityId, metadata);
 		for (Connection connection : PocketCon.getPocketConnections()) {
 			PocketCon.sendPocketPacket(connection, packet);

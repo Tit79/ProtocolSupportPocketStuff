@@ -4,7 +4,7 @@ import io.netty.buffer.ByteBuf;
 import protocolsupport.protocol.ConnectionImpl;
 import protocolsupport.protocol.serializer.VarNumberSerializer;
 import protocolsupport.protocol.typeremapper.pe.PEPacketIDs;
-import protocolsupport.protocol.utils.datawatcher.DataWatcherObject;
+import protocolsupport.protocol.types.networkentity.metadata.NetworkEntityMetadataObject;
 import protocolsupport.utils.CollectionsUtils.ArrayMap;
 import protocolsupportpocketstuff.packet.PEPacket;
 
@@ -15,7 +15,7 @@ public class EntityDataPacket extends PEPacket {
 
 	public EntityDataPacket() { }
 
-	public EntityDataPacket(long entityId, ArrayMap<DataWatcherObject<?>> metadata) {
+	public EntityDataPacket(long entityId, ArrayMap<NetworkEntityMetadataObject<?>> metadata) {
 		this.entityId = entityId;
 		//this.metadata = metadata;
 	}

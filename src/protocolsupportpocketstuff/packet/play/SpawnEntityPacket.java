@@ -5,7 +5,7 @@ import protocolsupport.protocol.ConnectionImpl;
 import protocolsupport.protocol.serializer.StringSerializer;
 import protocolsupport.protocol.serializer.VarNumberSerializer;
 import protocolsupport.protocol.typeremapper.pe.PEPacketIDs;
-import protocolsupport.protocol.utils.datawatcher.DataWatcherObject;
+import protocolsupport.protocol.types.networkentity.metadata.NetworkEntityMetadataObject;
 import protocolsupport.utils.CollectionsUtils;
 import protocolsupportpocketstuff.packet.PEPacket;
 
@@ -30,7 +30,7 @@ public class SpawnEntityPacket extends PEPacket {
 
 	public SpawnEntityPacket(long entityId, int entityType, float x, float y, float z, 
 			float motionX, float motionY, float motionZ, float pitch, float yaw, 
-			List<SetAttributesPacket.Attribute> attributes, CollectionsUtils.ArrayMap<DataWatcherObject<?>> metadata) {
+			List<SetAttributesPacket.Attribute> attributes, CollectionsUtils.ArrayMap<NetworkEntityMetadataObject<?>> metadata) {
 		this.entityId = entityId;
 		this.entityType = entityType;
 		this.x = x;

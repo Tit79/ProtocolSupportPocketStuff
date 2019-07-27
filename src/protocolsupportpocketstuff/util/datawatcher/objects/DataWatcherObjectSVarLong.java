@@ -3,9 +3,9 @@ package protocolsupportpocketstuff.util.datawatcher.objects;
 import io.netty.buffer.ByteBuf;
 import protocolsupport.api.ProtocolVersion;
 import protocolsupport.protocol.serializer.VarNumberSerializer;
-import protocolsupport.protocol.utils.datawatcher.ReadableDataWatcherObject;
+import protocolsupport.protocol.types.networkentity.metadata.ReadableNetworkEntityMetadataObject;
 
-public class DataWatcherObjectSVarLong extends ReadableDataWatcherObject<Long> {
+public class DataWatcherObjectSVarLong extends ReadableNetworkEntityMetadataObject<Long> {
 
 	public DataWatcherObjectSVarLong() {
 	}

@@ -7,8 +7,8 @@ import protocolsupport.protocol.serializer.MiscSerializer;
 import protocolsupport.protocol.serializer.StringSerializer;
 import protocolsupport.protocol.serializer.VarNumberSerializer;
 import protocolsupport.protocol.typeremapper.pe.PEPacketIDs;
-import protocolsupport.protocol.utils.datawatcher.DataWatcherObject;
-import protocolsupport.protocol.utils.types.NetworkItemStack;
+import protocolsupport.protocol.types.networkentity.metadata.NetworkEntityMetadataObject;
+import protocolsupport.protocol.types.NetworkItemStack;
 import protocolsupport.utils.CollectionsUtils;
 import protocolsupportpocketstuff.packet.PEPacket;
 
@@ -36,7 +36,7 @@ public class SpawnPlayerPacket extends PEPacket {
 			float x, float y, float z, 
 			float motionX, float motionY, float motionZ, 
 			float pitch, float headYaw, float yaw, 
-			CollectionsUtils.ArrayMap<DataWatcherObject<?>> metadata) {
+			CollectionsUtils.ArrayMap<NetworkEntityMetadataObject<?>> metadata) {
 		this.uuid = uuid;
 		this.name = name;
 		this.entityId = entityId;

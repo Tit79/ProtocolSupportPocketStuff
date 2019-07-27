@@ -5,8 +5,8 @@ import protocolsupport.protocol.ConnectionImpl;
 import protocolsupport.protocol.serializer.ItemStackSerializer;
 import protocolsupport.protocol.serializer.PositionSerializer;
 import protocolsupport.protocol.typeremapper.pe.PEPacketIDs;
-import protocolsupport.protocol.utils.types.Position;
-import protocolsupport.protocol.utils.types.nbt.NBTCompound;
+import protocolsupport.protocol.types.Position;
+import protocolsupport.protocol.types.nbt.NBTCompound;
 import protocolsupportpocketstuff.packet.PEPacket;
 
 public class TileDataUpdatePacket extends PEPacket {

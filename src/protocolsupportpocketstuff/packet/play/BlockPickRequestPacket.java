@@ -4,7 +4,7 @@ import io.netty.buffer.ByteBuf;
 import protocolsupport.protocol.ConnectionImpl;
 import protocolsupport.protocol.serializer.VarNumberSerializer;
 import protocolsupport.protocol.typeremapper.pe.PEPacketIDs;
-import protocolsupport.protocol.utils.types.Position;
+import protocolsupport.protocol.types.Position;
 import protocolsupportpocketstuff.packet.PEPacket;
 
 public class BlockPickRequestPacket extends PEPacket {

@@ -2,7 +2,7 @@ package protocolsupportpocketstuff.hacks.skulls;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
-import net.minecraft.server.v1_13_R2.PacketPlayOutRespawn;
+import net.minecraft.server.v1_14_R1.PacketPlayOutRespawn;
 import org.apache.commons.lang3.Validate;
 import protocolsupport.api.Connection;
 import protocolsupport.libs.com.google.gson.JsonObject;
@@ -13,13 +13,13 @@ import protocolsupport.protocol.serializer.ItemStackSerializer;
 import protocolsupport.protocol.serializer.PositionSerializer;
 import protocolsupport.protocol.serializer.VarNumberSerializer;
 import protocolsupport.protocol.typeremapper.pe.PEPacketIDs;
-import protocolsupport.protocol.utils.datawatcher.DataWatcherObject;
-import protocolsupport.protocol.utils.datawatcher.objects.DataWatcherObjectFloatLe;
-import protocolsupport.protocol.utils.types.Position;
-import protocolsupport.protocol.utils.types.nbt.NBTCompound;
-import protocolsupport.protocol.utils.types.nbt.NBTList;
-import protocolsupport.protocol.utils.types.nbt.NBTType;
-import protocolsupport.protocol.utils.types.nbt.serializer.PENBTSerializer;
+import protocolsupport.protocol.types.networkentity.metadata.NetworkEntityMetadataObject;
+import protocolsupport.protocol.types.networkentity.metadata.objects.NetworkEntityMetadataObjectFloatLe;
+import protocolsupport.protocol.types.Position;
+import protocolsupport.protocol.types.nbt.NBTCompound;
+import protocolsupport.protocol.types.nbt.NBTList;
+import protocolsupport.protocol.types.nbt.NBTType;
+import protocolsupport.protocol.types.nbt.serializer.PENBTSerializer;
 import protocolsupport.utils.CollectionsUtils;
 import protocolsupportpocketstuff.ProtocolSupportPocketStuff;
 import protocolsupportpocketstuff.api.util.PocketCon;
@@ -402,11 +402,11 @@ public class SkullTilePacketListener extends Connection.PacketListener {
 			int y = tag.getNumberTag("y").getAsInt();
 			int z = tag.getNumberTag("z").getAsInt();
 
-			CollectionsUtils.ArrayMap<DataWatcherObject<?>> metadata = new CollectionsUtils.ArrayMap<>(76);
+			CollectionsUtils.ArrayMap<NetworkEntityMetadataObject<?>> metadata = new CollectionsUtils.ArrayMap<>(76);
 
-			metadata.put(PeMetaBase.SCALE, new DataWatcherObjectFloatLe(1.05f)); //Needs to be a *bit* bigger than the original skull
-			metadata.put(PeMetaBase.BOUNDINGBOX_WIDTH, new DataWatcherObjectFloatLe(0.001f));
-			metadata.put(PeMetaBase.BOUNDINGBOX_HEIGTH, new DataWatcherObjectFloatLe(0.001f));
+			metadata.put(PeMetaBase.SCALE, new NetworkEntityMetadataObjectFloatLe(1.05f)); //Needs to be a *bit* bigger than the original skull
+			metadata.put(PeMetaBase.BOUNDINGBOX_WIDTH, new NetworkEntityMetadataObjectFloatLe(0.001f));
+			metadata.put(PeMetaBase.BOUNDINGBOX_HEIGTH, new NetworkEntityMetadataObjectFloatLe(0.001f));
 
 			UUID uuid = UUID.randomUUID();
 

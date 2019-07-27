@@ -46,8 +46,8 @@ dlDepsDirS.mkdirs()
 //TODO: Add ProtocolSupport to dlLibsC (Obviously we're in beta and cannot download yet so compilation will have to be done for now)
 def dlDepsC = [
 	new Tuple(
-		'https://mcmirror.io/files/Spigot/Spigot-1.13.2-a1f2566-20181123-1027.jar',
-		'spigot-1.13.2.jar'
+		'https://mcmirror.io/files/Spigot/Spigot-1.14.3-9de398a-20190719-2300.jar',
+		'spigot-1.14.3.jar'
 	),
 //	new Tuple(
 //		'https://github.com/GlowstoneMC/Glowstone/releases/download/2018.2.0/glowstone.jar',
@@ -115,6 +115,8 @@ dependencies {
 	shadow fileTree(dir: dlDepsDirC, include: '*.jar')
 	compile fileTree(dir: dlDepsDirS, include: '*.jar')
 	testCompile group: 'junit', name: 'junit', version: '4.12'
+	implementation 'commons-io:commons-io:2.6'
+	implementation 'org.apache.commons:commons-lang3:3.9'
 }
 
 

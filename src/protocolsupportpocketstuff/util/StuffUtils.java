@@ -1,7 +1,7 @@
 package protocolsupportpocketstuff.util;
 
 import org.apache.commons.io.IOUtils;
-import protocolsupport.protocol.utils.types.Position;
+import protocolsupport.protocol.types.Position;
 import protocolsupportpocketstuff.ProtocolSupportPocketStuff;
 
 import java.io.BufferedReader;
